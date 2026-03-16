@@ -4,8 +4,7 @@ export default function AboutBand() {
   return (
     <div className="about-band">
   <div className="about-inner">
-    {/* <div className="about-text reveal"> */}
-    <div className="about-text">
+    <div className="about-text reveal">
       <div className="section-label">Who We Are</div>
       <h2 className="section-title">Disc Golf's<br /><span style={{color:'var(--gold)'}}>Greatest</span><br />Coverage</h2>
       <p>Founded in 2021, GMT's mission is to deliver top-notch disc golf content and coverage. From tournament films to pro skins events, we're building something special for the disc golf community — and your support makes it all possible.</p>
