@@ -1,68 +1,64 @@
-// components/ScrollEffects.js
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export default function ScrollEffects() {
+  const pathname = usePathname();
+
   useEffect(() => {
-    // window.scrollTo(0, 0);
-    // ────────────────────────────────────────────────
-    // 1. Scroll Reveal with IntersectionObserver
-    // ────────────────────────────────────────────────
-    const reveals = document.querySelectorAll(".reveal");
-
-    if (!reveals.length) return; // nothing to observe
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            // Optional: unobserve after reveal (better perf)
-            // observer.unobserve(entry.target);
-          }
-          // Optional: remove class when scrolling back up
-          // else {
-          //   entry.target.classList.remove("visible");
-          // }
-        });
-      },
-      {
-        threshold: 0.12, // same as your original
-        rootMargin: "0px", // can tweak e.g. "-60px 0px" to reveal earlier
-      }
-    );
-
-    reveals.forEach((el) => observer.observe(el));
-
-    // ────────────────────────────────────────────────
-    // 2. Nav background change on scroll
-    // ────────────────────────────────────────────────
     const nav = document.querySelector("nav");
+    let observer;
+    let reveals = [];
 
-    if (!nav) return;
+    const bindRevealObserver = () => {
+      reveals = Array.from(document.querySelectorAll(".reveal"));
+
+      if (!reveals.length) return;
+
+      observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        {
+          threshold: 0.12,
+          rootMargin: "0px",
+        }
+      );
+
+      reveals.forEach((el) => observer.observe(el));
+    };
+
+    const rafId = window.requestAnimationFrame(bindRevealObserver);
 
     const handleScroll = () => {
+      if (!nav) return;
+
       if (window.scrollY > 60) {
-        nav.style.background = "rgba(10,10,10,0.97)";
-        nav.style.backdropFilter = "blur(12px)";
+        nav.classList.add("nav-scrolled");
       } else {
-        nav.style.background = "linear-gradient(to bottom, rgba(10,10,10,0.98) 0%, rgba(10,10,10) 100%)";
-        nav.style.backdropFilter = "blur(2px)";
+        nav.classList.remove("nav-scrolled");
       }
     };
 
     window.addEventListener("scroll", handleScroll);
-    // Optional: run once on mount (in case already scrolled)
     handleScroll();
 
-    // Cleanup (very important in Next.js)
     return () => {
-      reveals.forEach((el) => observer.unobserve(el));
-      observer.disconnect();
+      window.cancelAnimationFrame(rafId);
+
+      if (observer) {
+        reveals.forEach((el) => observer.unobserve(el));
+        observer.disconnect();
+      }
+
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []); // empty dependency = run once on mount
+  }, [pathname]);
 
-  return null; // this component doesn't render anything
+  return null;
 }

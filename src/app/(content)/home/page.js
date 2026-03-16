@@ -15,8 +15,8 @@ export default function HomePage() {
             </h1>
             <p className="hero-sub">Professional disc golf coverage, tournaments, and content. We bring the sport to life — on the course and on screen.</p>
             <div className="hero-actions">
-            <a href="https://greatestmediateam.com/events/" className="btn-primary">View Events</a>
-            <a href="https://www.youtube.com/@GreatestMediaTeam" className="btn-secondary" target="_blank">Watch on YouTube</a>
+            <Link href="/events" className="btn-primary">View Events</Link>
+            <Link href="https://www.youtube.com/@GreatestMediaTeam" className="btn-secondary" target="_blank">Watch on YouTube</Link>
             </div>
         </div>
         <div className="hero-stats">
