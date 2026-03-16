@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 export default function Services() {
   return (
@@ -9,7 +10,7 @@ export default function Services() {
                 <div className="section-label">What We Do</div>
                 <h2 className="section-title">Coverage.<br />Events.<br />Merch.</h2>
             </div>
-            <a href="https://greatestmediateam.com/about/" className="btn-secondary">Learn More About GMT</a>
+            <Link href="/about" className="btn-secondary">Learn More About GMT</Link>
             </div>
             <div className="services-grid">
             <div className="service-card reveal">

@@ -48,7 +48,7 @@ export default function About() {
               golf community.
             </p>
             <div className={styles.actions}>
-              <Link href="/#services" className="btn-primary">
+              <Link href="/videos" className="btn-primary">
                 Explore What We Do
               </Link>
               <Link
