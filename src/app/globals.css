@@ -911,6 +911,242 @@ a {
     margin: 0 auto 3rem;
   }
 
+  /* -- CONTACT -- */
+  .contact-page {
+    min-height: 100vh;
+    padding: 9rem 4rem 6rem;
+    background:
+      radial-gradient(circle at top right, rgba(60,184,232,0.14) 0%, transparent 32%),
+      linear-gradient(180deg, var(--black) 0%, var(--darker) 100%);
+  }
+
+  .contact-shell {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    gap: 3rem;
+    align-items: stretch;
+  }
+
+  .contact-copy,
+  .contact-form {
+    background: rgba(37, 43, 51, 0.76);
+    border: 1px solid rgba(60, 184, 232, 0.18);
+    backdrop-filter: blur(10px);
+  }
+
+  .contact-copy {
+    padding: 3rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .contact-copy::after {
+    content: '';
+    position: absolute;
+    inset: auto -15% -20% auto;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(60,184,232,0.18) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .contact-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3.2rem, 7vw, 5.8rem);
+    line-height: 0.95;
+    letter-spacing: 0.03em;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-title span {
+    color: var(--gold);
+  }
+
+  .contact-body {
+    max-width: 32rem;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.72);
+    margin-bottom: 2rem;
+  }
+
+  .contact-detail-card {
+    width: fit-content;
+    max-width: 28rem;
+    padding: 1.25rem 1.4rem;
+    background: rgba(30, 34, 41, 0.88);
+    border-left: 3px solid var(--gold);
+    position: relative;
+    z-index: 1;
+  }
+
+  .contact-detail-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.7rem;
+  }
+
+  .contact-detail-card p {
+    color: var(--gray);
+    line-height: 1.7;
+    font-size: 0.95rem;
+  }
+
+  .contact-form {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.22);
+  }
+
+  .contact-status {
+    padding: 3rem;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    background: rgba(37, 43, 51, 0.82);
+    border: 1px solid rgba(60, 184, 232, 0.18);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.22);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+  }
+
+  .contact-status::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--gold) 0%, transparent 100%);
+  }
+
+  .contact-status::after {
+    content: '';
+    position: absolute;
+    right: -4rem;
+    bottom: -4rem;
+    width: 16rem;
+    height: 16rem;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(60,184,232,0.16) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .contact-status-success {
+    background:
+      linear-gradient(180deg, rgba(37, 43, 51, 0.88) 0%, rgba(30, 34, 41, 0.96) 100%);
+  }
+
+  .contact-status-error {
+    background:
+      linear-gradient(180deg, rgba(50, 31, 37, 0.9) 0%, rgba(30, 34, 41, 0.96) 100%);
+    border-color: rgba(255, 113, 113, 0.22);
+  }
+
+  .contact-status-error::before {
+    background: linear-gradient(90deg, #ff7171 0%, transparent 100%);
+  }
+
+  .contact-status-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+
+  .contact-status-label::after {
+    content: '';
+    width: 3rem;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.6;
+  }
+
+  .contact-status-error .contact-status-label {
+    color: #ff9a9a;
+  }
+
+  .contact-status-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.6rem, 5vw, 4.6rem);
+    line-height: 0.96;
+    letter-spacing: 0.03em;
+    margin-bottom: 1rem;
+    max-width: 10ch;
+  }
+
+  .contact-status-copy {
+    max-width: 30rem;
+    color: rgba(255, 255, 255, 0.74);
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .contact-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  .contact-field span {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .contact-field input,
+  .contact-field textarea {
+    width: 100%;
+    border: 1px solid rgba(60, 184, 232, 0.18);
+    background: rgba(26, 31, 38, 0.95);
+    color: var(--white);
+    padding: 1rem 1.1rem;
+    font: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  }
+
+  .contact-field textarea {
+    resize: vertical;
+    min-height: 180px;
+  }
+
+  .contact-field input::placeholder,
+  .contact-field textarea::placeholder {
+    color: rgba(138, 154, 176, 0.72);
+  }
+
+  .contact-field input:focus,
+  .contact-field textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 4px rgba(60, 184, 232, 0.12);
+    transform: translateY(-1px);
+  }
+
+  .contact-submit {
+    border: none;
+    cursor: pointer;
+    justify-content: center;
+    margin-top: 0.4rem;
+  }
+
   /* ── FOOTER ── */
   footer {
     background: #060606;
@@ -1098,4 +1334,8 @@ a {
     .social-strip { flex-direction: column; gap: 2rem; text-align: center; }
     .footer-inner { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
     .mission { padding: 6rem 1.5rem; }
+    .contact-page { padding: 7rem 1.5rem 4rem; }
+    .contact-shell { grid-template-columns: 1fr; gap: 1.5rem; }
+    .contact-copy, .contact-form { padding: 2rem 1.5rem; }
+    .contact-submit { width: 100%; }
   }
