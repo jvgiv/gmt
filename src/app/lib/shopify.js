@@ -6,6 +6,7 @@
 
 // export async function shopifyFetch({ query, variables = {} }) {
 //     try {
+//         console.log(endpoint)
 //     const response = await fetch(endpoint, {
 //       method: 'POST',
 //       headers: {
@@ -17,8 +18,10 @@
 //     });
 
 //     const result = await response.json();
+//     console.log("Full API", token.length)
 //     if (result.errors) {
 //       console.error(result.errors);
+//       console.log(result.errors);
 //       throw new Error('Shopify API error');
 //     }
 //     return result.data;
