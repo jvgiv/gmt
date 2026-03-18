@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import CartButton from "@/components/ui/CartButton";
 
 const navItems = [
   { href: "/events", label: "Events" },
@@ -55,15 +56,19 @@ export default function Header() {
         >
           Shop Merch
         </Link>
+        <CartButton className="nav-cart-button nav-cart-button-mobile" onClick={closeMenu} mobile />
       </div>
 
-      <Link
-        href="/shop"
-        className="nav-cta nav-cta-desktop"
-        onClick={closeMenu}
-      >
-        Shop Merch
-      </Link>
+      <div className="nav-actions">
+        <CartButton className="nav-cart-button nav-cart-button-desktop" onClick={closeMenu} />
+        <Link
+          href="/shop"
+          className="nav-cta nav-cta-desktop"
+          onClick={closeMenu}
+        >
+          Shop Merch
+        </Link>
+      </div>
     </nav>
   );
 }

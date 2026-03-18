@@ -3,6 +3,7 @@ import "./globals.css";
 import ScrollEffects from "./ScrollEffects";
 import { bebas, barlow } from './fonts'
 import Header from "@/components/ui/Header";
+import { CartProvider } from '@/components/cart/CartProvider';
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -23,9 +24,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${bebas.variable} ${barlow.variable}`}>
       <body className={`${bebas.variable} ${barlow.variable}`}>
-        <ScrollEffects />
-        <Header />
-        {children}
+        <CartProvider>
+          <ScrollEffects />
+          <Header />
+          {children}
+        </CartProvider>
       </body>
     </html>
   );
