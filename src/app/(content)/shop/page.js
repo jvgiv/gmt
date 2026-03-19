@@ -1,43 +1,55 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { shopifyFetch } from '@/app/lib/shopify'
 
 async function getProducts() {
-  const query = `
-    {
-      products(first: 12) {
-        edges {
-          node {
-            id
-            title
-            handle
-            availableForSale
-            priceRange {
-              minVariantPrice {
-                amount
-                currencyCode
+  try {
+    const query = `
+      {
+        products(first: 12) {
+          edges {
+            node {
+              id
+              title
+              handle
+              availableForSale
+              priceRange {
+                minVariantPrice {
+                  amount
+                  currencyCode
+                }
               }
-            }
-            images(first: 1) {
-              edges {
-                node {
-                  url
-                  altText
+              images(first: 1) {
+                edges {
+                  node {
+                    url
+                    altText
+                  }
                 }
               }
             }
           }
         }
       }
-    }
-  `;
+    `;
 
-  const data = await shopifyFetch({ query });
-  return data.products.edges.map(edge => edge.node);
+    const data = await shopifyFetch({ query });
+    return {
+      products: data?.products?.edges?.map((edge) => edge.node) ?? [],
+      error: false,
+    };
+  } catch (error) {
+    console.error('Unable to load Shopify products:', error);
+    return {
+      products: [],
+      error: true,
+    };
+  }
 }
 
 export default async function Shop() {
-  const products = await getProducts();
+  const { products, error } = await getProducts();
 
   
   return (
@@ -49,11 +61,27 @@ export default async function Shop() {
             Gear up with the <span>same energy</span> we bring to every event.
           </h1>
           <p className="shop-copy">
-            Explore the latest GMT merch and support the team with apparel and
-            gear built for tournament days, travel weekends, and everyday wear.
+            Support our pros with their signature discs!
           </p>
+          <a
+            href="https://gmt.firstavailablepa.com/shop"
+            className="btn-primary"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Shop our Apparel
+          </a>
         </div>
 
+        {error ? (
+          <div className="shop-empty">
+            <span className="shop-empty-label">Store Offline</span>
+            <h2 className="shop-empty-title">We couldn't load the GMT store right now.</h2>
+            <p className="shop-empty-copy">
+              Shopify may be temporarily unavailable. Please refresh in a moment or check back soon.
+            </p>
+          </div>
+        ) : (
         <div className="shop-grid">
           {products.map((product) => (
             <Link
@@ -62,11 +90,15 @@ export default async function Shop() {
               className="shop-card reveal"
             >
               <div className="shop-card-media">
-                <img
-                  src={product.images.edges[0]?.node.url}
-                  alt={product.images.edges[0]?.node.altText || product.title}
-                  className="shop-card-image"
-                />
+                {product.images.edges[0]?.node.url ? (
+                  <Image
+                    src={product.images.edges[0].node.url}
+                    alt={product.images.edges[0].node.altText || product.title}
+                    className="shop-card-image"
+                    fill
+                    sizes="(max-width: 900px) 100vw, 33vw"
+                  />
+                ) : null}
                 <span className={`shop-card-tag ${product.availableForSale ? '' : 'is-sold-out'}`.trim()}>
                   {product.availableForSale ? 'GMT Merch' : 'Out of Stock'}
                 </span>
@@ -90,8 +122,9 @@ export default async function Shop() {
             </Link>
           ))}
         </div>
+        )}
 
-        {products.length === 0 ? (
+        {!error && products.length === 0 ? (
           <div className="shop-empty">
             <span className="shop-empty-label">Store Update</span>
             <h2 className="shop-empty-title">No products are live right now.</h2>
