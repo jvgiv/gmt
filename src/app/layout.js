@@ -4,6 +4,8 @@ import ScrollEffects from "./ScrollEffects";
 import { bebas, barlow } from './fonts'
 import Header from "@/components/ui/Header";
 import { CartProvider } from '@/components/cart/CartProvider';
+import Socials from "./(content)/socials/page";
+import Footer from "@/components/ui/Footer";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -28,6 +30,8 @@ export default function RootLayout({ children }) {
           <ScrollEffects />
           <Header />
           {children}
+          <Socials />
+          <Footer />
         </CartProvider>
       </body>
     </html>

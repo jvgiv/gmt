@@ -18,7 +18,7 @@ export default function Socials() {
         </Link>
     </div>
     <div className="social-divider"></div>
-    <Link href="https://greatestmediateam.com/shop/" className="btn-primary" style={{background:'var(--black)', color:'var(--gold-light)', border:'1px solid var(--gold)'}}>Shop Merch</Link>
+    <Link href="/shop" className="btn-primary" style={{background:'var(--black)', color:'var(--gold-light)', border:'1px solid var(--gold)'}}>Shop Discs</Link>
     </div>
   )
 }
