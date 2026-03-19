@@ -23,18 +23,18 @@ export default function Footer() {
     <div>
       <div className="footer-col-title">Navigate</div>
       <ul className="footer-links">
-        <li><Link href="https://greatestmediateam.com/events/">Events</Link></li>
-        <li><Link href="https://greatestmediateam.com/videos/">Videos</Link></li>
-        <li><Link href="https://greatestmediateam.com/about/">About</Link></li>
-        <li><Link href="https://greatestmediateam.com/contact/">Contact</Link></li>
-        <li><Link href="https://greatestmediateam.com/shop/">Shop</Link></li>
+        <li><Link href="/events">Events</Link></li>
+        <li><Link href="/videos">Videos</Link></li>
+        <li><Link href="/about">About</Link></li>
+        <li><Link href="/contact">Contact</Link></li>
+        <li><Link href="/shop">Shop</Link></li>
       </ul>
     </div>
     <div>
       <div className="footer-col-title">Events</div>
       <ul className="footer-links">
-        <li><Link href="https://greatestmediateam.com/hosted/2026-charlotte-roar/">2026 Charlotte Roar</Link></li>
-        <li><Link href="https://greatestmediateam.com/hosted/charlotte-roar-gmt-pro-skins-match/">Pro Skins Match</Link></li>
+        <li><Link href="https://www.discgolfscene.com/tournament/43rd_Annual_Dogwood_Crosstown_Classic_Presented_by_Batista_Grading_Inc_2026">43rd Annual Dogwood Crosstown Classic, Presented by Batista Grading Inc</Link></li>
+        <li><Link href="https://www.discgolfscene.com/tournament/Sunshine_Open_at_501_and_Mile_Marker_63_Pros_Presented_by_Abreu_Karol_and_GMT_2026">Sunshine Open at 501 and Mile Marker 63 - Presented by Abreu Karol, and GMT</Link></li>
         <li><Link href="/events">All Events</Link></li>
       </ul>
     </div>
@@ -44,7 +44,7 @@ export default function Footer() {
         <li><Link href="https://www.facebook.com/GreatestMediaTeam" target="_blank">Facebook</Link></li>
         <li><Link href="https://www.instagram.com/greatestmediateam/" target="_blank">Instagram</Link></li>
         <li><Link href="https://www.youtube.com/@GreatestMediaTeam" target="_blank">YouTube</Link></li>
-        <li><Link href="https://greatestmediateam.com/contact/">Contact Us</Link></li>
+        <li><Link href="/contact/">Contact Us</Link></li>
       </ul>
     </div>
   </div>
