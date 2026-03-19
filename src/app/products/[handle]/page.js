@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { shopifyFetch } from '@/app/lib/shopify';
 import ProductPurchase from '@/components/ProductPurchase';
 
@@ -100,10 +101,13 @@ export default async function ProductPage({ params }) {
           <div className="product-media reveal">
             {mainImage ? (
               <div className="product-image-frame">
-                <img
+                <Image
                   src={mainImage.url}
                   alt={mainImage.altText || product.title}
                   className="product-main-image"
+                  fill
+                  sizes="(max-width: 900px) 100vw, 55vw"
+                  priority
                 />
                 <div className="product-image-badge">GMT Merch</div>
               </div>
@@ -117,10 +121,12 @@ export default async function ProductPage({ params }) {
               <div className="product-gallery">
                 {galleryImages.map((edge, idx) => (
                   <div key={edge.node.url || idx} className="product-gallery-card">
-                    <img
+                    <Image
                       src={edge.node.url}
                       alt={edge.node.altText || `${product.title} view ${idx + 2}`}
                       className="product-gallery-image"
+                      fill
+                      sizes="(max-width: 900px) 50vw, 18vw"
                     />
                   </div>
                 ))}

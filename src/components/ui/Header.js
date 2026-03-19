@@ -66,7 +66,7 @@ export default function Header() {
           className="nav-cta nav-cta-desktop"
           onClick={closeMenu}
         >
-          Shop Merch
+          Shop Discs
         </Link>
       </div>
     </nav>

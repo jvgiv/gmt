@@ -17,7 +17,7 @@ export default function Services() {
                 <img className="service-img" src="https://greatestmediateam.com/wp-content/uploads/2025/10/451446714_17987647346679161_9175263979240049489_n-YX4bb2WzaRcZ93pq-1024x840.jpg" alt="Events" />
                 <div className="service-num">01</div>
                 <div className="service-name">Events</div>
-                <p className="service-desc">GMT hosts and films world-className disc golf tournaments — including pro skins matches, cash events, and the iconic Charlotte Roar.</p>
+                <p className="service-desc">GMT hosts and films world-class disc golf tournaments — including pro skins matches, cash events, and the iconic Charlotte Roar.</p>
                 <a href="https://greatestmediateam.com/events/" className="service-link">See All Events</a>
             </div>
             <div className="service-card reveal" style={{transitionDelay:'0.15s'}}>
