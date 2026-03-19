@@ -32,7 +32,7 @@ export default function Services() {
                 <div className="service-num">03</div>
                 <div className="service-name">Merch</div>
                 <p className="service-desc">Grab official GMT gear and show your support. Every purchase helps fuel more events, more coverage, and more disc golf for everyone.</p>
-                <a href="https://greatestmediateam.com/shop/" className="service-link">Shop the Store</a>
+                <a href="/shop" className="service-link">Shop the Store</a>
             </div>
             </div>
         </div>
