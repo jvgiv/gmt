@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from "./page.module.css";
 
 const events = [
@@ -64,10 +65,12 @@ export default function Events() {
 
           <article className={`${styles.featured} reveal visible`}>
             <div className={styles.featuredImageWrap}>
-              <img
+              <Image
                 src={featuredEvent.imageLink}
                 alt={featuredEvent.name}
                 className={styles.featuredImage}
+                fill
+                sizes="(max-width: 900px) 100vw, 55vw"
               />
               <div className={styles.imageOverlay} />
               <div className={styles.eventTag}>Featured Event</div>
@@ -105,10 +108,12 @@ export default function Events() {
               style={{ transitionDelay: `${index * 0.1}s` }}
             >
               <div className={styles.cardImageWrap}>
-                <img
+                <Image
                   src={event.imageLink}
                   alt={event.name}
                   className={styles.cardImage}
+                  fill
+                  sizes="(max-width: 900px) 100vw, 50vw"
                 />
                 <div className={styles.imageOverlay} />
               </div>

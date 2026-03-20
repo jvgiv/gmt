@@ -10,6 +10,14 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'i.ytimg.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'm.discgolfscene.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'discgolfscene.com',
+      },
     ],
   },
 };
