@@ -29,6 +29,18 @@ const teamMembers = [
     highlight:
       "With another DGPT Pro Tour season ahead, Harry is carrying a focused second-year mindset and will continue appearing across GMT coverage and original content.",
   },
+  // {
+  //   name: "Raivis Markons-Craig",
+  //   image: "/1496.png",
+  //   alt: "RMC",
+  //   role: "",
+  //   rating: "",
+  //   accent: "",
+  //   copy:
+  //     "",
+  //   highlight:
+  //     "",
+  // },
 ];
 
 export default function About() {
@@ -65,7 +77,7 @@ export default function About() {
             <p className={styles.panelLabel}>Team Snapshot</p>
             <div className={styles.panelStats}>
               <div>
-                <span>2</span>
+                <span>{teamMembers.length}</span>
                 <p>Featured team members</p>
               </div>
               <div>
