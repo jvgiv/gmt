@@ -22,7 +22,7 @@ export default function Services() {
                 <a href="https://greatestmediateam.com/events/" className="service-link">See All Events</a>
             </div>
             <div className="service-card reveal" style={{transitionDelay:'0.15s'}}>
-                <Image className="service-img" src="/cam.jpg" alt="Videos" width={1006} height={848} sizes="(max-width: 768px) 100vw, 33vw" style={{ height: 'auto' }} />
+                <Image className="service-img" src="/gmtcam.jpg" alt="Videos" width={1006} height={848} sizes="(max-width: 768px) 100vw, 33vw" style={{ height: 'auto' }} />
                 <div className="service-num">02</div>
                 <div className="service-name">Videos</div>
                 <p className="service-desc">Professional disc golf coverage since 2021 — tournament films, pro highlights, and content that captures the beauty of the sport.</p>
