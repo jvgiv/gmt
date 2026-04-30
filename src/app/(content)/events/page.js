@@ -16,7 +16,7 @@ const events = [
     desc: "Abreu Karol, Greatest Media Team, First Available Print and Apparel, and Disc Golf 978 are teaming up once more to bring you the newly rebranded Sunshine Open. Pros and amateurs will play three rounds with tee times all three days.",
     date: "May 29-31, 2026",
     imageLink:
-      "https://m.discgolfscene.com/logos/tournaments/107126/Sunshine_Open_at_501_and_Mile_Marker_63_Pros_Presented_by_Abreu_Karol_and_GMT_20261769271794.jpg",
+      "https://m.discgolfscene.com/flyers/tournaments/107126/discmania-presents-sunshine-open-at-501-and-mile-marker-63-presented-by-abreu-karol-and-gmt-1776988907-large.jpg",
   },
   {
     name: "DGVTour #6 - Brewster Ridge Open Driven by Innova - DGPT Q-Series",

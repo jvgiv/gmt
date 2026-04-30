@@ -30,6 +30,18 @@ const teamMembers = [
       "With another DGPT Pro Tour season ahead, Harry is carrying a focused second-year mindset and will continue appearing across GMT coverage and original content.",
   },
   // {
+  //   name: "Corey Carlson",
+  //   image: "/1496.png",
+  //   alt: "Corey Carlson",
+  //   role: "Team GMT",
+  //   // rating: "1024",
+  //   accent: "Returning for 2026",
+  //   copy:
+  //     "Corey started playing disc golf in 2000 and has designed / redesigned and installed more than a dozen courses in three different states.  Most recently he attended the 2nd annual Houck Growing up in Battle Creek, Michigan.",
+  //   highlight:
+  //     "His first mentor was Larry LaBond #6903 (2008, 2015 World Championship TD).",
+  // },
+  // {
   //   name: "Raivis Markons-Craig",
   //   image: "/1496.png",
   //   alt: "RMC",
@@ -139,7 +151,7 @@ export default function About() {
               <div className={styles.cardBody}>
                 <div className={styles.metaRow}>
                   <p>{member.role}</p>
-                  <span>PDGA Rating {member.rating}</span>
+                  {member.rating ? <span>PDGA Rating {member.rating}</span> : null }
                 </div>
                 <h3 className={styles.name}>{member.name}</h3>
                 <p className={styles.copy}>{member.copy}</p>

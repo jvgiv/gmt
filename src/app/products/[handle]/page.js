@@ -12,6 +12,10 @@ async function getProduct(handle) {
         handle
         description
         descriptionHtml
+        productType
+        category {
+          name
+        }
         priceRange {
           minVariantPrice {
             amount
@@ -36,6 +40,8 @@ async function getProduct(handle) {
             node {
               url
               altText
+              width
+              height
             }
           }
         }
@@ -65,9 +71,9 @@ export default async function ProductPage({ params }) {
         <div className="shop-shell">
           <div className="shop-empty">
             <span className="shop-empty-label">Product Not Found</span>
-            <h2 className="shop-empty-title">This item isn't available right now.</h2>
+            <h2 className="shop-empty-title">This item is not available right now.</h2>
             <p className="shop-empty-copy">
-              It may have been removed or isn't published yet. Check back soon!
+              It may have been removed or is not published yet. Check back soon!
             </p>
             <Link href="/shop" className="shop-card-link">
               Back to Shop
@@ -85,6 +91,11 @@ export default async function ProductPage({ params }) {
   const variantOptions = variants.map(({ node }) => node);
   const inStockCount = variants.filter(({ node }) => node.availableForSale).length;
   const formattedPrice = formatCurrency(price.amount, price.currencyCode);
+  const categoryName = product.category?.name?.trim() || 'Not categorized';
+  const productType = product.productType?.trim() || 'Not set';
+  const imageFrameStyle = mainImage?.width && mainImage?.height
+    ? { '--product-image-aspect-ratio': `${mainImage.width} / ${mainImage.height}` }
+    : undefined;
 
   return (
     <section className="shop-page">
@@ -100,7 +111,7 @@ export default async function ProductPage({ params }) {
         <div className="product-layout">
           <div className="product-media reveal">
             {mainImage ? (
-              <div className="product-image-frame">
+              <div className="product-image-frame" style={imageFrameStyle}>
                 <Image
                   src={mainImage.url}
                   alt={mainImage.altText || product.title}
@@ -156,11 +167,11 @@ export default async function ProductPage({ params }) {
               <div className="product-highlights">
                 <div className="product-highlight">
                   <span className="product-highlight-label">Category</span>
-                  <span className="product-highlight-value">Premium merch drop</span>
+                  <span className="product-highlight-value">{categoryName}</span>
                 </div>
                 <div className="product-highlight">
-                  <span className="product-highlight-label">Best for</span>
-                  <span className="product-highlight-value">Events, travel, and daily rotation</span>
+                  <span className="product-highlight-label">Type</span>
+                  <span className="product-highlight-value">{productType}</span>
                 </div>
               </div>
             </div>

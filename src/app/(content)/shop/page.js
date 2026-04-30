@@ -3,17 +3,28 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { shopifyFetch } from '@/app/lib/shopify'
 
+const TICKET_CATEGORY_NAMES = ['event ticket', 'event tickets'];
+
+function isTicketCategory(product) {
+  const categoryName = product?.category?.name?.trim().toLowerCase();
+
+  return TICKET_CATEGORY_NAMES.includes(categoryName);
+}
+
 async function getProducts() {
   try {
     const query = `
       {
-        products(first: 12) {
+        products(first: 50) {
           edges {
             node {
               id
               title
               handle
               availableForSale
+              category {
+                name
+              }
               priceRange {
                 minVariantPrice {
                   amount
@@ -35,8 +46,10 @@ async function getProducts() {
     `;
 
     const data = await shopifyFetch({ query });
+    const products = data?.products?.edges?.map((edge) => edge.node) ?? [];
+
     return {
-      products: data?.products?.edges?.map((edge) => edge.node) ?? [],
+      products: products.filter((product) => !isTicketCategory(product)).slice(0, 12),
       error: false,
     };
   } catch (error) {
@@ -63,20 +76,29 @@ export default async function Shop() {
           <p className="shop-copy">
             Support our pros with their signature discs!
           </p>
-          <a
-            href="https://gmt.firstavailablepa.com/shop"
-            className="btn-primary"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Shop our Apparel
-          </a>
+          <div className="shop-actions">
+            <a
+              href="https://gmt.firstavailablepa.com/shop"
+              className="btn-primary"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Shop our Apparel
+            </a>
+            <Link
+              href="/tickets"
+              className="btn-primary"
+              rel="noreferrer"
+            >
+              Get Tickets to Our Next Event
+            </Link>
+          </div>
         </div>
 
         {error ? (
           <div className="shop-empty">
             <span className="shop-empty-label">Store Offline</span>
-            <h2 className="shop-empty-title">We couldn't load the GMT store right now.</h2>
+            <h2 className="shop-empty-title">We could not load the GMT store right now.</h2>
             <p className="shop-empty-copy">
               Shopify may be temporarily unavailable. Please refresh in a moment or check back soon.
             </p>

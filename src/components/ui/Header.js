@@ -7,6 +7,7 @@ import CartButton from "@/components/ui/CartButton";
 const navItems = [
   { href: "/events", label: "Events" },
   { href: "/videos", label: "Videos" },
+  { href: "/tickets", label: "Tickets" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];

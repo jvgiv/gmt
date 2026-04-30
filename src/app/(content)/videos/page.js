@@ -54,7 +54,7 @@ export default async function Videos() {
         {hasError ? (
           <div className="shop-empty">
             <span className="shop-empty-label">Video Feed Offline</span>
-            <h2 className="shop-empty-title">We couldn't load the latest GMT videos.</h2>
+            <h2 className="shop-empty-title">We couldn&apos;t load the latest GMT videos.</h2>
             <p className="shop-empty-copy">
               YouTube may be temporarily unavailable. Please try again shortly or visit the
               channel directly.

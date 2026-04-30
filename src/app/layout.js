@@ -4,7 +4,7 @@ import ScrollEffects from "./ScrollEffects";
 import { bebas, barlow } from './fonts'
 import Header from "@/components/ui/Header";
 import { CartProvider } from '@/components/cart/CartProvider';
-import Socials from "./(content)/socials/page";
+import Socials from "@/components/ui/Socials";
 import Footer from "@/components/ui/Footer";
 
 // const geistSans = Geist({

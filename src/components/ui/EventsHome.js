@@ -28,7 +28,7 @@ export default function EventsHome() {
       </div>
       <div className="event-card">
         <div className="event-img-wrap">
-          <Image src="https://m.discgolfscene.com/logos/tournaments/107126/Sunshine_Open_at_501_and_Mile_Marker_63_Pros_Presented_by_Abreu_Karol_and_GMT_20261769271794.jpg" alt="Sunshine Open" fill sizes="(max-width: 768px) 100vw, 40vw" />
+          <Image src="https://m.discgolfscene.com/flyers/tournaments/107126/discmania-presents-sunshine-open-at-501-and-mile-marker-63-presented-by-abreu-karol-and-gmt-1776988907-large.jpg" alt="Sunshine Open" fill sizes="(max-width: 768px) 100vw, 40vw" />
           <div className="event-img-overlay"></div>
           <div className="event-tag">Hosted by GMT</div>
         </div>
