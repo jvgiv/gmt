@@ -8,7 +8,7 @@ const publicKeyEnv = process.env.EMAILJS_PUBLIC_KEY;
 
 export default function NewsLetter() {
     const [email, setEmail] = useState("");
-    const [success, setSuccess] = useState(-1);
+    const [success, setSuccess] = useState(0);
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     const handleChange = (e) => {

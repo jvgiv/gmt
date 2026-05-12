@@ -277,8 +277,8 @@ a {
     background:
       linear-gradient(160deg, rgba(31,37,45,0.65) 0%, transparent 50%),
       linear-gradient(to top, rgba(30,34,41,1) 0%, rgba(30,34,41,0.3) 60%, rgba(30,34,41,0.1) 100%),
-      /* url('/nt.webp') center/cover no-repeat; */
-      url('/simon.gif') center/cover no-repeat;
+      url('/nt.webp') center/cover no-repeat;
+      /* url('/simon.gif') center/cover no-repeat; */
   }
 
   .hero-bg::after {
