@@ -4,9 +4,9 @@ import { useState } from 'react'
 import emailjs from '@emailjs/browser'
 import Swal from 'sweetalert2'
 
-const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID;
-const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID;
-const publicKeyEnv = process.env.NEXT_PUBLIC_PUBLIC_KEY;
+const serviceId = process.env.EMAILJS_SERVICE_ID;
+const templateId = process.env.EMAILJS_TEMPLATE_ID;
+const publicKeyEnv = process.env.EMAILJS_PUBLIC_KEY;
 
 
 export default function Contact() {
