@@ -20,6 +20,10 @@ import Footer from "@/components/ui/Footer";
 export const metadata = {
   title: "Greatest Media Team",
   description: "Your home for all things disc golf",
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+  },
 };
 
 export default function RootLayout({ children }) {
