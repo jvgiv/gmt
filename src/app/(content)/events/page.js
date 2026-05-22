@@ -2,14 +2,14 @@ import Image from "next/image";
 import styles from "./page.module.css";
 
 const events = [
-  {
-    name: "43rd Annual Dogwood Crosstown Classic, Presented by Batista Grading Inc",
-    link: "https://www.discgolfscene.com/tournament/43rd_Annual_Dogwood_Crosstown_Classic_Presented_by_Batista_Grading_Inc_2026",
-    desc: "The 43rd Annual Dogwood Crosstown Classic, Presented by Batista Grading Inc is right around the corner and will be part of the NC Point Series. $3,000 added cash.",
-    date: "April 3-5, 2026",
-    imageLink:
-      "https://m.discgolfscene.com/flyers/tournaments/46484/39th-annual-dogwood-crosstown-classic-presented-by-eastern-disc-golf-1643254692-large.jpg",
-  },
+  // {
+  //   name: "43rd Annual Dogwood Crosstown Classic, Presented by Batista Grading Inc",
+  //   link: "https://www.discgolfscene.com/tournament/43rd_Annual_Dogwood_Crosstown_Classic_Presented_by_Batista_Grading_Inc_2026",
+  //   desc: "The 43rd Annual Dogwood Crosstown Classic, Presented by Batista Grading Inc is right around the corner and will be part of the NC Point Series. $3,000 added cash.",
+  //   date: "April 3-5, 2026",
+  //   imageLink:
+  //     "https://m.discgolfscene.com/flyers/tournaments/46484/39th-annual-dogwood-crosstown-classic-presented-by-eastern-disc-golf-1643254692-large.jpg",
+  // },
   {
     name: "Sunshine Open at 501 and Mile Marker 63 - Presented by Abreu Karol, and GMT",
     link: "https://www.discgolfscene.com/tournament/Sunshine_Open_at_501_and_Mile_Marker_63_Pros_Presented_by_Abreu_Karol_and_GMT_2026",
