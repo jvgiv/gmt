@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useCart } from '@/components/cart/CartProvider';
+import { useCart } from '@/app/components/cart/CartProvider';
 
 export default function CartButton({ className = '', onClick, mobile = false }) {
   const { cartCount } = useCart();

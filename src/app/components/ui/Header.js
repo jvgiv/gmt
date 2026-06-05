@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import CartButton from "@/components/ui/CartButton";
+import CartButton from "@/app/components/ui/CartButton";
 
 const navItems = [
   { href: "/events", label: "Events" },

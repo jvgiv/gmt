@@ -1,4 +1,4 @@
-import SiteFooter from '@/components/ui/SiteFooter';
+import SiteFooter from '@/app/components/ui/SiteFooter';
 
 export default function CartLayout({ children }) {
   return (

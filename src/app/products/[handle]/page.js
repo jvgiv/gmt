@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { shopifyFetch } from '@/app/lib/shopify';
-import ProductPurchase from '@/components/ProductPurchase';
+import ProductPurchase from '@/app/components/ProductPurchase';
 
 async function getProduct(handle) {
   const query = `

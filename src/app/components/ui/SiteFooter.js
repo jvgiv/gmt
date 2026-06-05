@@ -1,5 +1,5 @@
-import Footer from '@/components/ui/Footer';
-import Socials from '@/components/ui/Socials';
+import Footer from '@/app/components/ui/Footer';
+import Socials from '@/app/components/ui/Socials';
 
 export default function SiteFooter() {
   return (

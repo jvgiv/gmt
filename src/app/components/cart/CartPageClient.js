@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { useCart } from '@/components/cart/CartProvider';
+import { useCart } from '@/app/components/cart/CartProvider';
 
 function formatCurrency(amount, currencyCode) {
   return new Intl.NumberFormat('en-US', {

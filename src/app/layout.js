@@ -2,10 +2,10 @@
 import "./globals.css";
 import ScrollEffects from "./ScrollEffects";
 import { bebas, barlow } from './fonts'
-import Header from "@/components/ui/Header";
-import { CartProvider } from '@/components/cart/CartProvider';
-import Socials from "@/components/ui/Socials";
-import Footer from "@/components/ui/Footer";
+import Header from "@/app/components/ui/Header";
+import { CartProvider } from '@/app/components/cart/CartProvider';
+import Socials from "@/app/components/ui/Socials";
+import Footer from "@/app/components/ui/Footer";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",

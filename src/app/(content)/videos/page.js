@@ -1,6 +1,6 @@
 import React from 'react';
 import { getChannelVideos } from '@/app/lib/youtube';
-import VideosGrid from '@/components/videos/VideosGrid';
+import VideosGrid from '@/app/components/videos/VideosGrid';
 
 export const metadata = {
   title: 'GMT: Coverage + Videos',
