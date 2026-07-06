@@ -15,24 +15,24 @@ const events = [
   //   imageLink:
   //     "https://m.discgolfscene.com/flyers/tournaments/107126/discmania-presents-sunshine-open-at-501-and-mile-marker-63-presented-by-abreu-karol-and-gmt-1776988907-large.jpg",
   // },
-  {
-    name: "DGVTour #6 - Brewster Ridge Open Driven by Innova - DGPT Q-Series",
-    link: "https://www.discgolfscene.com/tournament/DGVTour_6_Brewster_Ridge_Open_2026",
-    desc: "Filming MPO Round 1, FPO Highlights, and MPO Round 3.",
-    date: "June 19-21, 2026",
-    location: "Vermont",
-    imageLink:
-      "https://m.discgolfscene.com/logos/clubs/5623/disc-golf-vermont-e30ca6233f0d.jpg",
-  },
-  {
-    name: "East Coast Metal Roofing presents The Massachusetts State Championship powered by Discmania",
-    link: "https://www.discgolfscene.com/tournament/East_Coast_Metal_Roofing_presents_The_Massachusetts_State_Championship_2026",
-    desc: "Filming MPO Rounds 1-3.",
-    date: "June 26-28, 2026",
-    location: "Massachusetts",
-    imageLink:
-      "https://m.discgolfscene.com/flyers/tournaments/107906/east-coast-metal-roofing-presents-the-massachusetts-state-championship-powered-by-discmania-1773240074-large.jpg",
-  },
+  // {
+  //   name: "DGVTour #6 - Brewster Ridge Open Driven by Innova - DGPT Q-Series",
+  //   link: "https://www.discgolfscene.com/tournament/DGVTour_6_Brewster_Ridge_Open_2026",
+  //   desc: "Filming MPO Round 1, FPO Highlights, and MPO Round 3.",
+  //   date: "June 19-21, 2026",
+  //   location: "Vermont",
+  //   imageLink:
+  //     "https://m.discgolfscene.com/logos/clubs/5623/disc-golf-vermont-e30ca6233f0d.jpg",
+  // },
+  // {
+  //   name: "East Coast Metal Roofing presents The Massachusetts State Championship powered by Discmania",
+  //   link: "https://www.discgolfscene.com/tournament/East_Coast_Metal_Roofing_presents_The_Massachusetts_State_Championship_2026",
+  //   desc: "Filming MPO Rounds 1-3.",
+  //   date: "June 26-28, 2026",
+  //   location: "Massachusetts",
+  //   imageLink:
+  //     "https://m.discgolfscene.com/flyers/tournaments/107906/east-coast-metal-roofing-presents-the-massachusetts-state-championship-powered-by-discmania-1773240074-large.jpg",
+  // },
   {
     name: "2026 Daceyland Open",
     link: "https://www.discgolfscene.com/tournament/2026_Daceyland_Open_2026",
@@ -41,6 +41,15 @@ const events = [
     location: "Massachusetts",
     imageLink:
       "https://m.discgolfscene.com/logos/tournaments/109344/2026_Daceyland_Open_20261771355384.jpg",
+  },
+  {
+    name: "2026 North Cove Classic - Powered by Greatest Media Team",
+    link: "https://www.discgolfscene.com/tournament/2026_North_Cove_Classic_Powered_by_GMT",
+    desc: "Hosting a flex start on the 7th.",
+    date: "August 8-9, 2026",
+    location: "Marion, NC",
+    imageLink:
+      "https://m.discgolfscene.com/flyers/tournaments/114593/2026-north-cove-classic-powered-by-greatest-media-team-1783374413-large.jpg",
   },
   {
     name: "Huk Be a Lady",
