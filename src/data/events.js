@@ -88,13 +88,13 @@ const events = [
       "/sched.png",
   },
   {
-    name: "Hub City Classic",
-    link: "",
+    name: "Hub City Halloween Open",
+    link: "https://www.discgolfscene.com/tournament/The_Hub_City_Halloween_Open_presented_by_Great_Courses_of_South_Carolina_2026",
     desc: "Filming Mixed Dubs Skins + MPO Rounds 1-3.",
     date: "October 30 - November 1, 2026",
     location: "South Carolina",
     imageLink:
-      "",
+      "https://m.discgolfscene.com/logos/tournaments/43998/Hub_City_Halloween_Open_20221658251829.jpg",
   },
 ];
 
