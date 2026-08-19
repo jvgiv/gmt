@@ -61,6 +61,15 @@ const events = [
   //     "",
   // },
   {
+    name: "Phoenix & Griffin Games presents the 2026 Syracuse Open sponsored by The Pizza Cutters",
+    link: "https://www.discgolfscene.com/tournament/The_Syracuse_Open_2026",
+    desc: "",
+    date: "September 12-13, 2026",
+    location: "New York",
+    imageLink:
+      "https://m.discgolfscene.com/logos/tournaments/111542/The_Syracuse_Open_20261786022625.jpg",
+  },
+  {
     name: "Nantucket Open",
     link: "https://www.discgolfscene.com/tournament/2026_Nantucket_Disc_Golf_Open_Pro_Day_Presented_by_GMT_and_Nantucket_Disc_Golf_Club",
     desc: "Filming FPO Round 1 and MPO Round 2.",
