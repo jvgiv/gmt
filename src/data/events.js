@@ -33,50 +33,59 @@ const events = [
   //   imageLink:
   //     "https://m.discgolfscene.com/flyers/tournaments/107906/east-coast-metal-roofing-presents-the-massachusetts-state-championship-powered-by-discmania-1773240074-large.jpg",
   // },
-  {
-    name: "2026 Daceyland Open",
-    link: "https://www.discgolfscene.com/tournament/2026_Daceyland_Open_2026",
-    desc: "Filming the Skins Match + MPO and FPO Final Rounds.",
-    date: "July 24-26, 2026",
-    location: "Massachusetts",
-    imageLink:
-      "https://m.discgolfscene.com/logos/tournaments/109344/2026_Daceyland_Open_20261771355384.jpg",
-  },
-  {
-    name: "2026 North Cove Classic - Powered by Greatest Media Team",
-    link: "https://www.discgolfscene.com/tournament/2026_North_Cove_Classic_Powered_by_GMT",
-    desc: "Hosting a flex start on the 7th.",
-    date: "August 8-9, 2026",
-    location: "Marion, NC",
-    imageLink:
-      "https://m.discgolfscene.com/flyers/tournaments/114593/2026-north-cove-classic-powered-by-greatest-media-team-1783374413-large.jpg",
-  },
-  {
-    name: "Huk Be a Lady",
-    link: "",
-    desc: "Filming FPO Round 1 Highlights as well as FPO Round 2",
-    date: "August 15, 2026",
-    location: "North Carolina",
-    imageLink:
-      "",
-  },
+  // {
+  //   name: "2026 Daceyland Open",
+  //   link: "https://www.discgolfscene.com/tournament/2026_Daceyland_Open_2026",
+  //   desc: "Filming the Skins Match + MPO and FPO Final Rounds.",
+  //   date: "July 24-26, 2026",
+  //   location: "Massachusetts",
+  //   imageLink:
+  //     "https://m.discgolfscene.com/logos/tournaments/109344/2026_Daceyland_Open_20261771355384.jpg",
+  // },
+  // {
+  //   name: "2026 North Cove Classic - Powered by Greatest Media Team",
+  //   link: "https://www.discgolfscene.com/tournament/2026_North_Cove_Classic_Powered_by_GMT",
+  //   desc: "Hosting a flex start on the 7th.",
+  //   date: "August 8-9, 2026",
+  //   location: "Marion, NC",
+  //   imageLink:
+  //     "https://m.discgolfscene.com/flyers/tournaments/114593/2026-north-cove-classic-powered-by-greatest-media-team-1783374413-large.jpg",
+  // },
+  // {
+  //   name: "Huk Be a Lady",
+  //   link: "",
+  //   desc: "Filming FPO Round 1 Highlights as well as FPO Round 2",
+  //   date: "August 15, 2026",
+  //   location: "North Carolina",
+  //   imageLink:
+  //     "",
+  // },
   {
     name: "Nantucket Open",
-    link: "",
-    desc: "Filming the Skins Match as well as FPO Round 1 and MPO Round 2.",
-    date: "October 3-4, 2026",
+    link: "https://www.discgolfscene.com/tournament/2026_Nantucket_Disc_Golf_Open_Pro_Day_Presented_by_GMT_and_Nantucket_Disc_Golf_Club",
+    desc: "Filming FPO Round 1 and MPO Round 2.",
+    date: "October 3, 2026",
     location: "Massachusetts",
     imageLink:
-      "",
+      "https://m.discgolfscene.com/logos/clubs/2426/nantucket-disc-golf-d5c828e5551e.jpg",
   },
   {
-    name: "Massachusetts Grand Prix",
-    link: "",
+    name: "Nantucket Open AM Day",
+    link: "https://www.discgolfscene.com/tournament/2026_Nantucket_Disc_Golf_Open_AM_Day_Presented_by_GMT_First_Available_Print_Disc_Golf_978",
+    desc: "Amateur day on Nantucket.",
+    date: "October 3, 2026",
+    location: "Massachusetts",
+    imageLink:
+      "https://m.discgolfscene.com/logos/clubs/2426/nantucket-disc-golf-d5c828e5551e.jpg",
+  },
+  {
+    name: "Massachusetts Grand Prix Presented by Abreu Karol",
+    link: "https://www.discgolfscene.com/tournament/2026_Massachusetts_Grand_Prix_Presented_by_Abreu_Karol",
     desc: "Filming FPO Round 1 and MPO Round 2.",
     date: "October 18-19, 2026",
     location: "Massachusetts",
     imageLink:
-      "",
+      "/sched.png",
   },
   {
     name: "Hub City Classic",
