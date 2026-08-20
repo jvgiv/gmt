@@ -63,7 +63,7 @@ const events = [
   {
     name: "Phoenix & Griffin Games presents the 2026 Syracuse Open sponsored by The Pizza Cutters",
     link: "https://www.discgolfscene.com/tournament/The_Syracuse_Open_2026",
-    desc: "",
+    desc: "Filming all three rounds of MPO.",
     date: "September 12-13, 2026",
     location: "New York",
     imageLink:
